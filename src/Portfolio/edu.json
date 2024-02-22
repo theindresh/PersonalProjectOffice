@@ -1,0 +1,36 @@
+
+[
+    {
+      "id": 1,
+      "degree": "B.tech",
+      "image": "../Assest/10th.jpg",
+      "collegeName": "Noida Institute of Engineering And technology",
+      "yearOfPassing": "2023",
+      "course": "Computer Science & Engineering"
+    },
+    {
+      "id": 2,
+      "degree": "Diploma",
+      "image": "./images/school deatils/10th.jpg",
+      "collegeName": "Janta Polytechnic Jahangirabad BSR (UP)",
+      "yearOfPassing": "2020",
+      "course": "Computer Science & Engineering"
+    },
+    {
+      "id": 3,
+      "degree": "Inter Mediate",
+      "image": "./images/school deatils/12th.jpg",
+      "collegeName": "GJIC Gorakhpur (UP)",
+      "yearOfPassing": "2017",
+      "course": "Science"
+    },
+    {
+      "id": 4,
+      "degree": "High School",
+      "image": "./images/school deatils/10th.jpg",
+      "collegeName": "MBIC Buddha NGR Adda Bazar Maharajganj (UP)",
+      "yearOfPassing": "2015",
+      "course": "Science"
+    }
+  ]
+  

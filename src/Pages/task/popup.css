@@ -1,0 +1,85 @@
+.main {
+    text-align: center;
+  }
+     
+  .popup-container {
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+    
+  .popup-container button {
+    padding: 10px 20px;
+    background-color: #ffd500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+    
+  .mainbox {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .inputtext {
+    margin-bottom: 20px;
+  }
+  
+  .inputtext label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .inputtext input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .inputtext button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popclg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .popclg h1 {
+    margin: 0;
+  }
+  
+  .xforclose {
+    cursor: pointer;
+  }
+  
+  .showmsginbox {
+    text-align: center;
+    width: 60%;
+    height: 200px;
+    max-width: 400px; /* Maximum width to maintain readability */
+    margin: 20px auto; /* Centering the box */
+    padding: 20px;
+    background-color: #007bff;
+    color: wheat;
+    border: 2px solid red;
+    border-radius: 5px;
+  }
+  
+  .showmsginbox p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  

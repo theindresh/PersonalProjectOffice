@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+    *,
+    *:before,
+    *:after{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    :active,
+    :hover,
+    :focus{
+        outline: 0 !important;
+        outline-offset: 0;
+    }
+    a,
+    a:hover{
+        text-decoration: none;
+    }
+    a:hover{
+        color: var(--primary-color) !important;
+    }
+
+    ul,
+    ol{
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ===== variable define ====== */
+
+    :root{
+        --primary-color: #265c8f;
+        --secondry-color:#0464f5;
+        --third-color:#7245ee;
+        --white-color: #fff;
+        --text-color:#000000;
+        --text-gray:#999;
+        --black-color: #000;
+        --primary-font:'Roboto','sans-serif';
+        --secondry-font:'Quicksand', 'sans-serif';
+    }
+    html{
+        scroll-behavior: smooth;
+
+    }
+    body{
+        font-family: var(--primary-font);
+        font-weight: 400;
+        font-size: 100%;
+    }
+/*
+ ==============================
+custom scrollbar 
+==============================
+ */
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--text-color);
+}
+::-webkit-slider-thumb{
+    background: var(--primary-color);
+}
+
+/* custom css design  */
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--secondry-color);
+}
+
+h2{
+
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 700;
+    /* margin-bottom: 3rem; */
+    color: var(--secondry-color);
+    line-height: 3rem;
+}
+
+h4{
+    font-family: var(--secondry-font);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--secondry-color);
+}
+h5{
+    font-family: var(--secondry-font);
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+p{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+.name-effect{
+    text-align: center;
+    border-bottom: 2px solid rgb(9, 146, 238);
+    border-radius: 10px;
+    
+    box-shadow: 5px 10px 15px -2px rgb(19, 113, 255);
+    
+}
+.main-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    border-radius: 15px;
+    color: var(--white-color);
+    font-size: 0.9378rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 5px 10px 20px -1px rgb(19, 113, 255);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .5s ease-out 0s ;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+
+}
+.white-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9378rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0, 0, 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .5s ease-out 0s ;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+
+}
+.main-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.white-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.wrapper{
+    padding-top: 7.24rem;
+    padding-bottom: 1rem;
+}
+.text-content{
+    width: 70%;
+    margin: auto;
+}
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2{
+    color: var(--white-color);
+
+}
+/* skills */
+.zoom-effect{
+    transition: 0.3s;
+}
+.zoom-effect:hover{
+    transform: scale(1.1);
+}
+    /* header design  */
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.625rem;
+    transition: all 300ms linear;
+}
+.navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    font-size: 0.9380rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+.navigation-wrap .main-btn{
+    padding: 0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left: 0.624rem;
+}
+.navigation-wrap.scroll-on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white-color);
+    box-shadow: 0 0.125rem 1.75rem 0 rgba(0, 0, 0, 0.5);
+    transition: all .15s ease-in-out 0s;
+}
+
+    /* section 1 top-banner design   */
+    .top-banner{
+        width: 80%;
+        background: url('../../Assest/bg-1.png') no-repeat;
+        background-size: cover;
+        padding: 10rem 9.380rem;
+    }
+
+    /* section 2 counter  */
+    .counter-section{
+        background-color: var(--primary-color);
+        padding: 2.5rem 0;
+    }
+
+
+
+    /* section 3 about  */
+    .about-section{
+        background: var(--white-color);
+
+    }
+    .about-section .card,
+    .about-section .card img{
+        border-radius: 0.725rem;
+    }
+    .about-section .text-sec{
+        padding-left:2rem ;
+    }
+    /* skill  */
+    .html{
+        height: 10px;
+        background-color: #eeff05;
+        border-radius: 15px;
+    }
+    .css{
+        height: 8px;
+        background-color: #05f7ff;
+        border-radius: 15px;
+    }
+    .bootstrap{
+        height: 5px;
+        background-color: #55ff06;
+        border-radius: 15px;
+    }
+    .java{
+        height: 9px;
+        background-color: #cc00ff;
+        border-radius: 15px;
+    }
+    /* skill section end  */
+
+    /* education  */
+    .education-title{
+        border: 3px solid transparent;
+        border-radius: 2px ;
+        background: var(--primary-color);
+        color: var(--white-color);
+    }
+    /* section 10 footer   */
+
+    .footer{
+        width: 100%;
+        background: var(--primary-color);
+    }
+    .footer .footer-link{
+        font-size: 1rem;
+        color:var(--white-color);
+        padding: 0 1.75rem;
+
+    }
+    .footer .footer-link:hover{
+        color: var(--white-color) !important;
+    }
+    .footer a i{
+        font-size: 2rem;
+        color: var(--white-color);
+        padding: 0 1rem;
+    }
