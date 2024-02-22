@@ -1,9 +1,11 @@
-import Main from './Pages/Routes/Main'
+import MainRoute from "./Routes/MainRoute"
 
-function App() {
-  return (
-    <Main/>
-  );
+
+function App(){
+  return(
+<>
+<MainRoute/>
+</>
+  )
 }
-
-export default App;
+export default App
