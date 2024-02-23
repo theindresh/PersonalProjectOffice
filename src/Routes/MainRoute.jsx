@@ -11,6 +11,7 @@ import Todolist from '../Pages/vikshsir/Todolist';
 import Login from "../Pages/Authentication/Login";
 import Signup from "../Pages/Authentication/Signup";
 import SetComponent from "../Pages/Nehamam/SetComponent";
+import Comp1 from "../Pages/Rahulsir/Comp1";
 function MainRoute() {
   return (
     <BrowserRouter>
@@ -28,6 +29,8 @@ function MainRoute() {
             <Route path="/login" element ={<Login/>}/>
             <Route path="/signup" element ={<Signup/>}/>
             <Route path="/usecontext" element ={<SetComponent/>}/>
+            <Route path="/feach" element ={<Comp1/>}/>
+
           </Route>
         </Routes>
       </div>
