@@ -1,0 +1,64 @@
+.ReducerName {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .ReducerName h2 {
+    margin-top: 0;
+  }
+  
+  .ReducerName ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ReducerName li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .ReducerName button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .ReducerName input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .ReducerName button.add-item-btn {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ReducerName button.add-item-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  .ReducerName button.remove-item-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ReducerName button.remove-item-btn:hover {
+    background-color: #c0392b;
+  }
+  
