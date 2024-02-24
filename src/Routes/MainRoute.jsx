@@ -12,9 +12,14 @@ import Login from "../Pages/Authentication/Login";
 import Signup from "../Pages/Authentication/Signup";
 import SetComponent from "../Pages/Nehamam/SetComponent";
 import Comp1 from "../Pages/Rahulsir/Comp1";
+import Comp2 from "../Pages/Rahulsir/Comp2";
+import Comp3 from "../Pages/Rahulsir/Comp3";
+import Comp4 from "../Pages/Rahulsir/Comp4";
+import Comp5 from "../Pages/Rahulsir/Comp5";
+import Addtocart from "../Pages/vikshsir/Addtocart";
 function MainRoute() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>  
       <div>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -29,8 +34,12 @@ function MainRoute() {
             <Route path="/login" element ={<Login/>}/>
             <Route path="/signup" element ={<Signup/>}/>
             <Route path="/usecontext" element ={<SetComponent/>}/>
-            <Route path="/feach" element ={<Comp1/>}/>
-
+            <Route path="/feachuseEffect" element ={<Comp1/>}/>
+            <Route path="/feachuseState" element ={<Comp2/>}/>
+            <Route path="/feachuseCallback" element ={<Comp3/>}/>
+            <Route path="/feachuseReducer" element ={<Comp4/>}/>
+            <Route path="/feachuseMemo" element ={<Comp5/>}/>
+            <Route path="/addtocart" element ={<Addtocart/>}/>
           </Route>
         </Routes>
       </div>
