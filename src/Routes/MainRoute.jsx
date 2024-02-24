@@ -16,9 +16,10 @@ import Comp2 from "../Pages/Rahulsir/Comp2";
 import Comp3 from "../Pages/Rahulsir/Comp3";
 import Comp4 from "../Pages/Rahulsir/Comp4";
 import Comp5 from "../Pages/Rahulsir/Comp5";
+import Addtocart from "../Pages/vikshsir/Addtocart";
 function MainRoute() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>  
       <div>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -38,6 +39,7 @@ function MainRoute() {
             <Route path="/feachuseCallback" element ={<Comp3/>}/>
             <Route path="/feachuseReducer" element ={<Comp4/>}/>
             <Route path="/feachuseMemo" element ={<Comp5/>}/>
+            <Route path="/addtocart" element ={<Addtocart/>}/>
           </Route>
         </Routes>
       </div>

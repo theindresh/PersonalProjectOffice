@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from 'react';
 import { CiSquareRemove } from "react-icons/ci";
-import './comp4.css'
+import './comp4.module.css'
 
 const listReducer = (state, action) => {
   switch (action.type) {

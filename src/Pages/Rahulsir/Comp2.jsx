@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './comp2.module.css'
 
 function Comp2() {
     const [input, setInput] = useState("Indresh");

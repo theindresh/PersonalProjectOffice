@@ -46,6 +46,14 @@ const Navbar = () => {
                     <li><Link className="dropdown-item" to="/feachuseMemo">Task1 UseMemo</Link></li>
                   </ul>
                 </li>
+              <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Vikash Sir
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><Link className="dropdown-item" to="/addtocart">Add To Cart</Link></li>               
+                  </ul>
+                </li>
             </ul>
           </div>
         </div>
