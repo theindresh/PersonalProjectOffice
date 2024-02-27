@@ -17,6 +17,7 @@ import Comp3 from "../Pages/Rahulsir/Comp3";
 import Comp4 from "../Pages/Rahulsir/Comp4";
 import Comp5 from "../Pages/Rahulsir/Comp5";
 import Addtocart from "../Pages/vikshsir/Addtocart";
+import Memo from "../Pages/Alish sir/Memo";
 function MainRoute() {
   return (
     <BrowserRouter>  
@@ -40,6 +41,7 @@ function MainRoute() {
             <Route path="/feachuseReducer" element ={<Comp4/>}/>
             <Route path="/feachuseMemo" element ={<Comp5/>}/>
             <Route path="/addtocart" element ={<Addtocart/>}/>
+            <Route path="/usememo" element ={<Memo/>}/>
           </Route>
         </Routes>
       </div>
