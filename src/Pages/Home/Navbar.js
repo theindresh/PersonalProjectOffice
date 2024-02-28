@@ -54,6 +54,9 @@ const Navbar = () => {
                     <li><Link className="dropdown-item" to="/addtocart">Add To Cart</Link></li>               
                   </ul>
                 </li>
+                <li className="nav-item">
+                <Link className="nav-link" to="/usememo">UseMemo</Link>
+              </li>
             </ul>
           </div>
         </div>
