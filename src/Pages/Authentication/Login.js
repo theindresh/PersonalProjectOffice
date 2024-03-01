@@ -1,58 +1,55 @@
 import React, { useState } from "react";
-import axios from "axios";
-// import "./login.css";
 
-function Login() {
+const Login = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post("http://localhost:8081/login", {
-        username,
-        password,
-      });
-
-      if (response.status === 200) {
-        setMessage("Login successful");
-      } else {
-        setMessage("Invalid credentials");
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
-      setMessage("An error occurred");
+  const handleLogin = () => {
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+    if (username === storedUsername && password === storedPassword) {
+      setIsLoggedIn(true);
+    } else {
+      setError("Invalid username or password");
     }
   };
 
   return (
-    <div className="App">
-      <div className="login-container">
-        <h2>Login</h2>
-        <div className="form-group">
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+    <div className="container">
+      <div className="row justify-content-center mt-5">
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title text-center mb-4">Login</h2>
+              {error && <div className="alert alert-danger" role="alert">{error}</div>}
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  className="form-control"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <button className="btn btn-primary btn-block" onClick={handleLogin}>
+                Login
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button onClick={handleLogin}>Login</button>
-        {message && (
-          <p className={message === "Login successful" ? "success" : "error"}>
-            {message}
-          </p>
-        )}
       </div>
     </div>
   );
-}
+};
+
 export default Login;

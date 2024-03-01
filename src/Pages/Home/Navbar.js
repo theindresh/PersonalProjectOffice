@@ -57,9 +57,6 @@ const Navbar = () => {
                 <li className="nav-item">
                 <Link className="nav-link" to="/usememo">UseMemo</Link>
               </li>
-                <li className="nav-item">
-                <Link className="nav-link" to="/cal">Calculator</Link>
-              </li>
             </ul>
           </div>
         </div>
@@ -69,6 +66,7 @@ const Navbar = () => {
             <button className="btn btn-primary mr-2" >Login</button>
             </Link>
             <Link to="/signup">
+
             <button className="btn btn-success">Signup</button>
             </Link>
         </div>
