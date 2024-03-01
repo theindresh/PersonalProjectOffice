@@ -1,89 +1,112 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { postSignUp } from "../Api/Signup";
 
-const Signup = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+function Signup() {
+  const [values, setValues] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    username: "",
+    password: "",
+  });
 
-  const handleSignup = () => {
-    // Here you can implement your signup logic
-    const userData = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      username: username,
-      password: password
-    };
-
-    // Store the user data in local storage
-    localStorage.setItem("userData", JSON.stringify(userData));
-
-    alert("Signup successful!");
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
   };
 
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    try {
+      const apiData = await postSignUp(values);
+      if (apiData) {
+        console.log("success");
+        setValues({
+          fname: "",
+          lname: "",
+          email: "",
+          username: "",
+          password: "",
+        });
+      }
+      // console.log(apiData);
+    } catch (error) {
+      console.log(error);
+    }
+    // ... rest of the code
+    // axios
+    //   .post("http://localhost:8081/signup", values)
+    //   .then((res) => {
+    //     console.log("Registration successful", res);
+    //     // ... rest of the code
+    //   })
+    //   .catch((err) => {
+    //     console.error("Error during registration", err);
+    //   });
+  }
+
+  // console.log(values, "djfhdj");
   return (
-    <div className="container">
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
-              <h2 className="card-title text-center mb-4">Signup</h2>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="First Name"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Last Name"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
-              <button className="btn btn-success btn-block" onClick={handleSignup}>
-                Signup
-              </button>
-            </div>
-          </div>
-        </div>
+    <>
+      <div className="loginback">
+        <form onSubmit={handleSubmit}>
+          <h2>Signup</h2>
+          <label htmlFor="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            value={values.fname}
+            required
+            onChange={handleChange}
+          />
+          <label htmlFor="lname">Last Name:</label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            value={values.lname}
+            required
+            onChange={handleChange}
+          />
+          <label htmlFor="email">Enamil</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={values.email}
+            required
+            onChange={handleChange}
+          />
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={values.userid}
+            required
+            onChange={handleChange}
+          />
+
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password" // Corrected from "values" to "password"
+            value={values.password}
+            required
+            onChange={handleChange}
+          />
+
+          <button type="submit">Sign Up</button>
+        </form>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default Signup;
