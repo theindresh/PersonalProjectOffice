@@ -18,6 +18,7 @@ import Comp4 from "../Pages/Rahulsir/Comp4";
 import Comp5 from "../Pages/Rahulsir/Comp5";
 import Addtocart from "../Pages/vikshsir/Addtocart";
 import Memo from "../Pages/Alish sir/Memo";
+import Calculator from "../Pages/ChatBot/Calculator";
 function MainRoute() {
   return (
     <BrowserRouter>  
@@ -42,6 +43,7 @@ function MainRoute() {
             <Route path="/feachuseMemo" element ={<Comp5/>}/>
             <Route path="/addtocart" element ={<Addtocart/>}/>
             <Route path="/usememo" element ={<Memo/>}/>
+            <Route path="/cal" element ={<Calculator/>}/>
           </Route>
         </Routes>
       </div>
