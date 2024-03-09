@@ -60,13 +60,19 @@ const Navbar = () => {
                 <li className="nav-item">
                 <Link className="nav-link" to="/cal">Calculator</Link>
               </li>
+                <li className="nav-item">
+                <Link className="nav-link" to="/debouceing">Calculator</Link>
+              </li>
+                <li className="nav-item">
+                <Link className="nav-link" to="/portfolio">Portfolio</Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="d-flex mx-5 gap-3">
             <Link to="/Login">
-            <button className="btn btn-primary mr-2" >Login</button>
+            <button className="btn btn-primary mr-2">Login</button>
             </Link>
             <Link to="/signup">
             <button className="btn btn-success">Signup</button>

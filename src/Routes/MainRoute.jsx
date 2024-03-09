@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Layout from "../Pages/Home/Navbar";
 import Home from "../Pages/Home/Home";
-import Blogs from "../Pages/Home/Blogs";
+import Blogs from "../Pages/Home/Portfolio";
 import Contact from "../Pages/Home/Contact";
 import NoPage from "../Pages/Home/NoPage";
 import Popup from '../Pages/task/Popup';
@@ -19,6 +19,8 @@ import Comp5 from "../Pages/Rahulsir/Comp5";
 import Addtocart from "../Pages/vikshsir/Addtocart";
 import Memo from "../Pages/Alish sir/Memo";
 import Calculator from "../Pages/ChatBot/Calculator";
+import Debouncing from "../Pages/Debo/Debouncing";
+import Portfolio from "../Pages/Home/Portfolio";
 function MainRoute() {
   return (
     <BrowserRouter>  
@@ -44,6 +46,8 @@ function MainRoute() {
             <Route path="/addtocart" element ={<Addtocart/>}/>
             <Route path="/usememo" element ={<Memo/>}/>
             <Route path="/cal" element ={<Calculator/>}/>
+            <Route path="/debouceing" element ={<Debouncing/>}/>
+            <Route path="/portfolio" element ={<Portfolio/>}/>
           </Route>
         </Routes>
       </div>

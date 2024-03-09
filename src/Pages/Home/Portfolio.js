@@ -2,7 +2,7 @@ import Hero from '../../Portfolio/Hero';
 import About from '../../Portfolio/About';
 import Education from '../../Portfolio/Education';
 import Chatbot from '../ChatBot/Chatbot';
-const Home = () => {
+const Portfolio = () => {
     return(
       <>
       <div>
@@ -17,4 +17,4 @@ const Home = () => {
     )
   };
   
-  export default Home;
+  export default Portfolio;
